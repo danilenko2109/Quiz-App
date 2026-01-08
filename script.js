@@ -62,80 +62,227 @@ const progressBar = document.getElementById("progress");
 //   },
 // ];
 
-
 const quizQuestions = [
   {
-    question: "Столица России?",
+    question: "Как будет 'Привет' по-немецки?",
     answers: [
-      { text: "Санкт-Петербург", correct: false },
-      { text: "Москва", correct: true },
-      { text: "Казань", correct: false },
-      { text: "Новосибирск", correct: false },
+      { text: "Tschüss", correct: false },
+      { text: "Hallo", correct: true },
+      { text: "Danke", correct: false },
+      { text: "Ja", correct: false },
     ],
+    level: "A1",
+    category: "Приветствия"
   },
   {
-    question: "Самая высокая гора в мире?",
+    question: "Что означает 'Guten Morgen'?",
     answers: [
-      { text: "Канченджанга", correct: false },
-      { text: "Эверест", correct: true },
-      { text: "Макалу", correct: false },
-      { text: "Килиманджаро", correct: false },
+      { text: "Добрый вечер", correct: false },
+      { text: "Спокойной ночи", correct: false },
+      { text: "Доброе утро", correct: true },
+      { text: "Добрый день", correct: false },
     ],
+    level: "A1",
+    category: "Приветствия"
   },
   {
-    question: "Какой химический элемент обозначается как 'O'?",
+    question: "Как сказать 'Спасибо' по-немецки?",
     answers: [
-      { text: "Золото", correct: false },
-      { text: "Кислород", correct: true },
-      { text: "Осмий", correct: false },
-      { text: "Олово", correct: false },
+      { text: "Bitte", correct: false },
+      { text: "Entschuldigung", correct: false },
+      { text: "Danke", correct: true },
+      { text: "Gern geschehen", correct: false },
     ],
+    level: "A1",
+    category: "Основные фразы"
   },
   {
-    question: "Кто написал 'Войну и мир'?",
+    question: "Как будет 'Я' по-немецки?",
     answers: [
-      { text: "Фёдор Достоевский", correct: false },
-      { text: "Антон Чехов", correct: false },
-      { text: "Лев Толстой", correct: true },
-      { text: "Александр Пушкин", correct: false },
+      { text: "Du", correct: false },
+      { text: "Ich", correct: true },
+      { text: "Er", correct: false },
+      { text: "Wir", correct: false },
     ],
+    level: "A1",
+    category: "Местоимения"
   },
   {
-    question: "Какая планета известна как 'Красная планета'?",
+    question: "Что означает 'Wie geht es dir?'?",
     answers: [
-      { text: "Венера", correct: false },
-      { text: "Марс", correct: true },
-      { text: "Юпитер", correct: false },
-      { text: "Сатурн", correct: false },
+      { text: "Как тебя зовут?", correct: false },
+      { text: "Сколько тебе лет?", correct: false },
+      { text: "Как дела?", correct: true },
+      { text: "Откуда ты?", correct: false },
     ],
+    level: "A1",
+    category: "Разговорные фразы"
   },
   {
-    question: "Сколько континентов на Земле?",
+    question: "Какой артикль у слова 'Haus' (дом)?",
     answers: [
-      { text: "5", correct: false },
-      { text: "6", correct: false },
-      { text: "7", correct: true },
-      { text: "8", correct: false },
+      { text: "der", correct: false },
+      { text: "die", correct: false },
+      { text: "das", correct: true },
+      { text: "kein", correct: false },
     ],
+    level: "A2",
+    category: "Артикли"
   },
   {
-    question: "Кто был первым человеком в космосе?",
+    question: "Что означает 'Ich habe Hunger'?",
     answers: [
-      { text: "Нил Армстронг", correct: false },
-      { text: "Юрий Гагарин", correct: true },
-      { text: "Алексей Леонов", correct: false },
-      { text: "Валентина Терешкова", correct: false },
+      { text: "Я устал", correct: false },
+      { text: "Я хочу пить", correct: false },
+      { text: "Я голоден", correct: true },
+      { text: "Мне холодно", correct: false },
     ],
+    level: "A2",
+    category: "Повседневные фразы"
   },
   {
-    question: "Какая самая длинная река в мире?",
+    question: "Как спросить 'Сколько это стоит?'?",
     answers: [
-      { text: "Амазонка", correct: true },
-      { text: "Нил", correct: false },
-      { text: "Янцзы", correct: false },
-      { text: "Миссисипи", correct: false },
+      { text: "Wo ist das?", correct: false },
+      { text: "Wie viel kostet das?", correct: true },
+      { text: "Was ist das?", correct: false },
+      { text: "Wann kommst du?", correct: false },
     ],
+    level: "A2",
+    category: "В магазине"
   },
+  {
+    question: "Как будет 'вчера' по-немецки?",
+    answers: [
+      { text: "heute", correct: false },
+      { text: "morgen", correct: false },
+      { text: "gestern", correct: true },
+      { text: "jetzt", correct: false },
+    ],
+    level: "A2",
+    category: "Время"
+  },
+  {
+    question: "Как сказать 'Я не понимаю'?",
+    answers: [
+      { text: "Ich weiß nicht", correct: false },
+      { text: "Ich verstehe nicht", correct: true },
+      { text: "Ich kann nicht", correct: false },
+      { text: "Ich möchte nicht", correct: false },
+    ],
+    level: "A2",
+    category: "Разговорные фразы"
+  },
+  {
+    question: "Что означает 'Einkaufszentrum'?",
+    answers: [
+      { text: "Школа", correct: false },
+      { text: "Больница", correct: false },
+      { text: "Торговый центр", correct: true },
+      { text: "Вокзал", correct: false },
+    ],
+    level: "B1",
+    category: "Лексика"
+  },
+  {
+    question: "Как правильно: 'Ich ___ nach Hause gegangen'?",
+    answers: [
+      { text: "bin", correct: true },
+      { text: "habe", correct: false },
+      { text: "war", correct: false },
+      { text: "werde", correct: false },
+    ],
+    level: "B1",
+    category: "Перфект"
+  },
+  {
+    question: "Что означает 'obwohl'?",
+    answers: [
+      { text: "потому что", correct: false },
+      { text: "когда", correct: false },
+      { text: "чтобы", correct: false },
+      { text: "хотя", correct: true },
+    ],
+    level: "B1",
+    category: "Союзы"
+  },
+  {
+    question: "Как спросить 'Как долго ты учишь немецкий?'?",
+    answers: [
+      { text: "Warum lernst du Deutsch?", correct: false },
+      { text: "Wie lange lernst du Deutsch?", correct: true },
+      { text: "Wo lernst du Deutsch?", correct: false },
+      { text: "Wann lernst du Deutsch?", correct: false },
+    ],
+    level: "B1",
+    category: "Вопросы"
+  },
+  {
+    question: "Что означает 'sich freuen auf'?",
+    answers: [
+      { text: "бояться чего-либо", correct: false },
+      { text: "радоваться чему-либо", correct: true },
+      { text: "злиться на кого-либо", correct: false },
+      { text: "интересоваться чем-либо", correct: false },
+    ],
+    level: "B1",
+    category: "Глаголы с предлогами"
+  },
+  {
+    question: "Как будет 'несмотря на' по-немецки?",
+    answers: [
+      { text: "wegen", correct: false },
+      { text: "trotz", correct: true },
+      { text: "während", correct: false },
+      { text: "dank", correct: false },
+    ],
+    level: "B1",
+    category: "Предлоги"
+  },
+  {
+    question: "Что означает 'Je älter ich werde, desto...'?",
+    answers: [
+      { text: "Чем старше я становлюсь, тем...", correct: true },
+      { text: "Чем больше я учу, тем...", correct: false },
+      { text: "Чем быстрее я бегу, тем...", correct: false },
+      { text: "Чем дальше я еду, тем...", correct: false },
+    ],
+    level: "B1",
+    category: "Сравнительные конструкции"
+  },
+  {
+    question: "Как правильно: 'Wenn ich Zeit ___, würde ich reisen'?",
+    answers: [
+      { text: "habe", correct: false },
+      { text: "hätte", correct: true },
+      { text: "hatte", correct: false },
+      { text: "haben werde", correct: false },
+    ],
+    level: "B1",
+    category: "Конъюнктив"
+  },
+  {
+    question: "Что означает 'sowohl... als auch'?",
+    answers: [
+      { text: "или... или", correct: false },
+      { text: "ни... ни", correct: false },
+      { text: "как... так и", correct: true },
+      { text: "не только... но и", correct: false },
+    ],
+    level: "B1",
+    category: "Союзы"
+  },
+  {
+    question: "Как будет 'Если бы я знал, я бы пришел'?",
+    answers: [
+      { text: "Wenn ich weiß, komme ich", correct: false },
+      { text: "Wenn ich wusste, kam ich", correct: false },
+      { text: "Wenn ich gewusst hätte, wäre ich gekommen", correct: true },
+      { text: "Wenn ich wissen würde, komme ich", correct: false },
+    ],
+    level: "B1",
+    category: "Условные предложения"
+  }
 ];
 // QUIZ STATE VARS
 let currentQuestionIndex = 0;
